@@ -1,6 +1,5 @@
 # Specify the version of PHP we use for our Chevereto
 FROM alpine:latest
-ARG CHEVERETO_VERSION=1.3.0
 WORKDIR /var/www/localhost/htdocs/
 COPY installer.php /var/www/localhost/htdocs/
 
