@@ -9,10 +9,8 @@ services:
   db:
     image: mariadb
     volumes:
-      - ./mysql:/var/lib/mysql:rw
+      - /path/to/mysql/data:/var/lib/mysql:rw
     restart: always
-    #networks:
-    #  - chevereto
     environment:
       MYSQL_ROOT_PASSWORD: chevereto_root
       MYSQL_DATABASE: chevereto
@@ -24,8 +22,6 @@ services:
     image: martadinata666/chevereto
     restart: always
     container_name: chevereto
-    #networks:
-    #  - chevereto
     environment:
       CHEVERETO_DB_HOST: db
       CHEVERETO_DB_USERNAME: chevereto
@@ -34,21 +30,13 @@ services:
       CHEVERETO_DB_PREFIX: chv_
     volumes:
       - htdocs:/var/www/localhost/htdocs:rw
-      - /media/WD/Pictures:/var/www/localhost/htdocs/importing:rw
-      - /media/WD/ch-pic:/var/www/localhost/htdocs/images:rw
+      - /path/to/images/:/var/www/localhost/htdocs/images:rw
     ports:
       - 2000:80
-#networks:
-#  chevereto:
-#    name: chevereto
-#    driver: bridge
-#    ipam:
-#      config:
-#        - subnet: 172.66.10.0/24
 volumes:
   htdocs:
 ```
-### You can change port or network as needed. In sample using port 2000
+### You can change port or network as needed. In sample using port 2000.
 
 ## Usage
 ```
