@@ -28,7 +28,7 @@ CMD /usr/sbin/httpd -DFOREGROUND -f /etc/apache2/httpd.conf
 # DB connection environment variables
 ENV CHEVERETO_DB_HOST=db CHEVERETO_DB_USERNAME=chevereto CHEVERETO_DB_PASSWORD=chevereto CHEVERETO_DB_NAME=chevereto CHEVERETO_DB_PREFIX=chv_ CHEVERETO_DB_PORT=3306
 
-USER chev
+#USER chev
 
 # Set all required labels, we set it here to make sure the file is as reusable as possible
 LABEL org.label-schema.url="https://github.com/martadinata666/docker-chevereto" \
