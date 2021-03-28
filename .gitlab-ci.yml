@@ -20,4 +20,5 @@ docker-build-master:
     refs:
       - master
     changes:
-      - "Dockerfile"
+      - Dockerfile
+      - installer.php
